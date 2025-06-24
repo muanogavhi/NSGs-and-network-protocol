@@ -61,15 +61,16 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <br />
 <br />
-<h3 align="center">
-  Now let's observe some ICMP traffic
-</h3>
+
+<h2>ICMP Traffic Observation</h2>
+
 <br />
 <p>
   Remote into your Windows 10 Virtual Machine, install Wireshark, open it and filter for ICMP traffic only.
 </p>
-<p>
-  <img src="https://i.imgur.com/0BsfNiS.jpg" height="75%" width="100%" alt="Microsoft Remote Desktop - Mac"/>
+
+![image](https://github.com/user-attachments/assets/1348a1df-806c-471d-9c53-76559e7ec504)
+
 </p>
 <p>
   Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM. Observe ping requests and replies within WireShark:
@@ -105,9 +106,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <br />
 <br />
-<h3 align="center">
-  Time to observe SSH traffic
-</h3>
+
+<h2>SSH Traffic Analysis</h2>
+
 <br />
 <p>
   Back in Wireshark, filter for SSH traffic only and from your Windows 10 VM, “SSH into” your Ubuntu virtual machine (via its private IP address). Type commands (ls, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark.
@@ -119,9 +120,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <p>
 <br />
 <br />
-<h3 align="center">
-  Next, we're going to observe DHCP Traffic
-</h3>
+  
+  <h2>Observe DHCP Traffic </h2>
+
 <br />
 <p>
   Back in Wireshark, filter for DHCP traffic only. From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew)
@@ -133,9 +134,9 @@ Observe the DHCP traffic appearing in WireShark:
 </p>
 <br />
 <br />
-<h3 align="center">
-  Let's now observe our DNS traffic next
-</h3>
+
+ <h2>Observe DNS Traffic </h2>
+
 <br />
 <p>
   Back in Wireshark, filter for DNS traffic only.
@@ -148,9 +149,9 @@ Observe the DHCP traffic appearing in WireShark:
 </p>
 <br />
 <br />
-<h3 align="center">
-  Finally, we will observe RDP traffic to finish up this tutorial
-</h3>
+
+<h2>Observe RDP Traffic </h2>
+
 <br />
 <p>
   Back in Wireshark, filter for RDP traffic only using "tcp.port==3389".
@@ -162,9 +163,10 @@ Observe the DHCP traffic appearing in WireShark:
   <img src="https://i.imgur.com/hNlhTVp.png" height="75%" width="100%" alt="RDP traffic"/>
 </p>
 <p>
-  Now that we're finished observing the network, DON'T FORGET TO CLEAN UP YOUR AZURE ENVIRONMENT! This will prevent you from incurring additional charges and you won't be left surprised!
-</p>
-<p>
+  Through this project, we succesfully explored the dynamic network interaction between two Azure Virtual Machines while emploting wire shark for deep traffic analysis. By configuring Network Security Groups, we gained valuable insights into how security measures affect the flow of ICMP traffic and other protocols.This excercise enhanced my understanding of network behavior in cloud enviroments and showcased the importance of effective security configurations.
+ 
+  <h2>CLEAN UP YOUR AZURE ENVIROMENT  </h2>
+  
   Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. You'll typically be notified or can click unde the bell notification just to make sure.
 </p>
 </p>
