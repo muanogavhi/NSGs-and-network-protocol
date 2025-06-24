@@ -21,11 +21,6 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Ubuntu Server 20.04
 
 
-
-
-</br>
-</br>
-
 <h2>Setting up your virtual environment </h2>
 </h3>
 </br>
@@ -157,7 +152,7 @@ Observe the DHCP traffic appearing in WireShark:
   Back in Wireshark, filter for RDP traffic only using "tcp.port==3389".
 </p>
 <p>
-  this continuos transmission ensures a seamless remot desktop experience. even without direct user interaction, RDP sends periodic updates to maintain the session.
+  This continuos transmission ensures a seamless remot desktop experience. even without direct user interaction, RDP sends periodic updates to maintain the session.
 </p>
 <p>
   <img src="https://i.imgur.com/hNlhTVp.png" height="75%" width="100%" alt="RDP traffic"/>
@@ -167,6 +162,5 @@ Observe the DHCP traffic appearing in WireShark:
  
   <h2>CLEAN UP YOUR AZURE ENVIROMENT  </h2>
   
-  Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. You'll typically be notified or can click unde the bell notification just to make sure.
-</p>
+  Close your Remote Desktop connection, delete the Resource Group(s) created at the beginning of this tutorial, and verify Resource Group deletion. 
 </p>
